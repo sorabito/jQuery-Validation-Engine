@@ -1715,7 +1715,7 @@
 					"marginTop": pos.marginTopSize,
 					"opacity": 0
 				}).data("callerField", field);
-				// recalculate pos to fix initial position in order to expected prompt height.
+				// recalculate pos in order to get expected prompt height and fix initial position.
 				pos = methods._calculatePosition(field, prompt, options);
 				prompt.css({
 					'position': positionType === 'inline' ? 'relative' : 'absolute',
