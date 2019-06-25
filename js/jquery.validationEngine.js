@@ -1715,6 +1715,16 @@
 					"marginTop": pos.marginTopSize,
 					"opacity": 0
 				}).data("callerField", field);
+				// recalculate pos to fix initial position in order to expected prompt height.
+				pos = methods._calculatePosition(field, prompt, options);
+				prompt.css({
+					'position': positionType === 'inline' ? 'relative' : 'absolute',
+					"top": pos.callerTopPosition,
+					"left": pos.callerleftPosition,
+					"right": "initial",
+					"marginTop": pos.marginTopSize,
+					"opacity": 0
+				}).data("callerField", field);
 		    	}
 
 
